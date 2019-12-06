@@ -31,10 +31,12 @@ enum custom_keycodes {
 
 #define C_SYMB  LT(_SYMB,KC_GRV)
 #define C_CMD   GUI_T(KC_QUOT)
+#define C_HYPER ALL_T(KC_NO)
+#define C_MEH   MEH_T(KC_NO)
 #define C_CTRLZ CTL_T(KC_Z)
 #define C_ESC   CTL_T(KC_ESC)
 #define C_HOME  GUI_T(KC_HOME)
-#define C_EMOIJ MOD_LCTL | MOD_LGUI | KC_SPC
+#define C_EMOIJ LGUI(LCTL(KC_SPC))
 
 #define C_MEDIA LT(_MEDIA, KC_SCLN)
 
@@ -46,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_DEL  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,KC_LBRC ,                          KC_RBRC ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_BSPC ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,MOD_HYPR,                          MOD_MEH ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,C_MEDIA ,C_CMD   ,
+     KC_BSPC ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,C_HYPER ,                          C_MEH   ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,C_MEDIA ,C_CMD   ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,C_HOME  ,        KC_LALT ,C_ESC   ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
